@@ -30,6 +30,8 @@ Tela da segunda versão:
 
 ##
 
-### Link do jogo: 🎮
+### Links dos jogos: 🎮
 
-- [Jogo](https://athilas-silva.github.io/jogo-cartas-v2/index.html)
+- [Jogo v1](https://athilas-silva.github.io/Lima/Aula15_atividade/index.html)
+
+- [Jogo v2](https://athilas-silva.github.io/jogo-cartas-v2/index.html)
