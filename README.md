@@ -27,6 +27,9 @@ Tela da segunda versão:
 - CSS
 - JavaScript
 - [Imagens da página inicial](https://www.freepik.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [GoogleFonts](https://fonts.google.com/)
+- [EmojiPedia](https://emojipedia.org/)
 
 ##
 
