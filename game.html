@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c28c5">
+    <title>Quiz de Animes</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/game-responsive.css">
+    <script src="https://kit.fontawesome.com/6ced12f15b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <h1>Quiz de Animes <i class="fas fa-gamepad"></i></h1>
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">Página Inicial</a>
+                        </li>
+
+                        <li>
+                            <a href="https://athilas-silva.github.io/Lima/Aula15_atividade/index.html" target="_black">1ª versão do jogo</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.freepik.com/" target="_black">Site das Imagens</a>
+                        </li>
+
+                        <li>
+                            <a href='https://www.freepik.com/photos/background' target="_black">1ª Autor</a>
+                        </li>
+
+                        <li>
+                            <a href='https://www.freepik.com/vectors/technology' target="_black">2ª Autor</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span id="close" class="close" onclick="closeModal()">&times;</span>
+                
+                <div id="banner">
+                    <video controls muted autoplay loop id="video"></video>
+                </div>
+
+                <h1 id="question"></h1>
+
+                <label for="input0" id="label0"></label>
+                <input type="radio" id="input0" name="alter" value="0">
+
+                <label for="input1" id="label1"></label>
+                <input type="radio" id="input1" name="alter" value="1">
+
+                <label for="input2" id="label2"></label>
+                <input type="radio" id="input2" name="alter" value="2">
+
+                <label for="input3" id="label3"></label>
+                <input type="radio" id="input3" name="alter" value="3">
+            </div>
+        </div>
+
+        <div class="card-wrapper">
+
+            <div class="card">
+                <img src="./img/black-clover.png" alt="Poster do Anime" onclick="questionsFunction(0)">
+            </div>
+
+            <div class="card">
+                <img src="./img/bleach.png" alt="Poster do Anime" onclick="questionsFunction(1)">
+            </div>
+
+            <div class="card">
+                <img src="./img/my-hero-academia.png" alt="Poster do Anime" onclick="questionsFunction(2)">
+            </div>
+            
+            <div class="card">
+                <img src="img/death-note.png" alt="Poster do Anime" onclick="questionsFunction(3)">
+            </div>
+
+            <div class="card">
+                <img src="./img/dr-stone.png" alt="Poster do Anime" onclick="questionsFunction(4)">
+            </div>
+
+            <div class="card">
+                <img src="./img/dbs.png" alt="Poster do Anime" onclick="questionsFunction(5)">
+            </div>
+
+            <div class="card">
+                <img src="./img/jujutsu-kaisen.png" alt="Poster do Anime" onclick="questionsFunction(6)">
+            </div>
+
+            <div class="card">
+                <img src="./img/naruto-shippuden.png" alt="Poster do Anime" onclick="questionsFunction(7)">
+            </div>
+
+            <div class="card">
+                <img src="./img/one-piece.png" alt="Poster do Anime" onclick="questionsFunction(8)">
+            </div>
+
+            <div class="card">
+                <img src="./img/opm.png" alt="Poster do Anime" onclick="questionsFunction(9)">
+            </div>
+
+            <div class="card">
+                <img src="./img/snk.png" alt="Poster do Anime" onclick="questionsFunction(10)">
+            </div>
+
+            <div class="card">
+                <img src="./img/ds.png" alt="Poster do Anime" onclick="questionsFunction(11)">
+            </div>
+        </div>
+    </main>
+
+    <div id="buttonArea">
+        <button class="buttonSave" onclick="saveScore()">Salvar</button>
+
+        <a href="./game.html" id="newGame">Jogar Novamente</a>
+    </div>
+
+    <section id="raking">
+        <table>
+            <caption><strong>Classificação</strong></caption>
+
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Pontuação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>&#x1f451;</td>
+                    <td class="user"> </td>
+                    <td class="point"> </td>
+                </tr>
+
+                <tr>
+                    <td>2ª</td>
+                    <td class="user"> </td>
+                    <td class="point"> </td>
+                </tr>
+
+                <tr>
+                    <td>3ª</td>
+                    <td class="user"> </td>
+                    <td class="point"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-midia">
+            <li><a href="https://www.linkedin.com/in/athilas-soares-silva-204541206/" target="_black"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Athilas-Silva" target="_black"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://portfolioathilas.netlify.app/" target="_black"><i class="fas fa-portrait"></i></a></li>
+        </ul>
+
+        <ul class="menu-footer">
+            <li>
+                <a href="./index.html">Página Inicial</a>
+            </li>
+
+            <li>
+                <a href="https://athilas-silva.github.io/Lima/Aula15_atividade/index.html" target="_black">1ª versão do jogo</a>
+            </li>
+
+            <li>
+                <a href="https://www.freepik.com/" target="_black">Site das Imagens</a>
+            </li>
+
+            <li>
+                <a href='https://www.freepik.com/photos/background' target="_black">1ª Autor</a>
+            </li>
+
+            <li>
+                <a href='https://www.freepik.com/vectors/technology' target="_black">2ª Autor</a>
+            </li>
+        </ul>
+
+        <p>&copy;Athilas Silva | Todos os direitos Reservados</p>
+    </footer>
+
+    <script src="./js/game.js"></script>
+</body>
+
+</html>
