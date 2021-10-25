@@ -20,6 +20,7 @@ for(const link of links){
 // Variaveis de modal e seu conteudo e informações do localStorage
 const modal = document.getElementById("modal");
 const content = document.getElementById("modal-content");
+const answerElements = document.querySelectorAll(".answer");
 const video = document.getElementById("video");
 const buttonAnswer = document.createElement("button");
 const questions = document.getElementById("question");
@@ -138,6 +139,11 @@ const cards = [
     }
 ];
 
+//Removendo as opções marcadas nas perguntas seguintes
+const deselectAnswers = () => {  
+    answerElements.forEach((answer) => (answer.checked = false));  
+};
+
 // Função das perguntas atribuindo os videos e os botões
 function questionsFunction(n){
     video.setAttribute("src", cards[n].banner);
@@ -159,6 +165,7 @@ function questionsFunction(n){
     label3.innerText = cards[n].alter[3];
 
     modal.style.display = "block";
+    deselectAnswers();
 }
 
 // Função de fechar o Modal
