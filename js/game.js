@@ -60,8 +60,8 @@ const cards = [
     {
         banner: "./video/BokuNoHero.mp4",
         question: "Quanto de poder do One for All Midoriya consegue suportar atualmente?",
-        alter: ["10%", "15%", "20%", "30%"],
-        correct: 2,
+        alter: ["15%", "20%", "70%", "100%"],
+        correct: 1,
         points: 10,
         done: false,
     },
